@@ -1,0 +1,35 @@
+###Verify that the ansible package is installed###
+
+ansible --version
+
+###ansible.cfg###
+;;;ansible defaults;;;
+[defaults]
+;;;connect to manage hosts as the devops user;;;
+remote_user = devops
+;;; use the inventory subdirectory to contain inventory files and scripts;;;
+inventory = inventory
+;;;end;;;
+
+
+
+;;;privileges defaults;;;
+[privilege_escalation]
+;;;disable privilege escalation by default;;;
+become = false
+;;;default settings to have ansible use the sudo method to switch to the root user account;;;
+become_method = sudo
+become_user = root
+;;;no prompt for either the devops login or the sudo password;;;
+become_ask_pass = false
+;;;end;;;
+
+
+;;;execute an adhoc command targetting the everyone host group to verify that devops is the remote user/
+and that privilege escalation is disabled by default;;;
+ansible everyone -m command -a 'id'
+
+;;;execute an adhoc command, targetting your everyone host group that uses the copy module to modify the contents of the/
+/etc/motd file on all hosts in the group, based on the following instructions. Use the copy modules content directive to ensure the/
+/etc/motd file consists of the string This server is managed by Ansible.\n as a single line. (The\n used with the contend directive
+causes the module to put a newline at the end of the string.) You need to request privilege

@@ -1,19 +1,10 @@
-   62  sudo cat /etc/sudoers.d/devops
-   63  ssh devops@servera.lab.example.com
-   64  ls
-   65  cd ..
-   66  ls
-   67  vi dep-adhoc/
-   68  ls
-   69  cd dep-adhoc
-   70  ls
-   71  cat ansible.cfg 
-   72  cat inventory 
-   73  ansible everyone -m ping
-   74  ansible localhost -m command -a 'id'
-   75  ansible localhost -m command -a 'id' -u devops
-   76  ansible localhost -m command -a 'cat /etc/motd' -u devops
-   77  ansible localhost -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops
-   78  ansible localhost -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops --become
-   79  ansible everyone -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops --become
-   80  ansible everyone -m command -a 'cat /etc/motd' -u devops
+sudo cat /etc/sudoers.d/devops
+ssh devops@servera.lab.example.com
+ansible everyone -m ping
+ansible localhost -m command -a 'id'
+ansible localhost -m command -a 'id' -u devops
+ansible localhost -m command -a 'cat /etc/motd' -u devops
+ansible localhost -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops
+ansible localhost -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops --become
+ansible everyone -m copy -a 'content="Managed by Ansible\n" dest=/etc/motd' -u devops --become
+ansible everyone -m command -a 'cat /etc/motd' -u devops

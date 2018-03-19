@@ -1,0 +1,27 @@
+Useful links to do some reading…
+
+So...where do we get ansible?
+https://www.ansible.com/get-started
+
+Why did Red Hat Acquire Ansible?
+http://www.redhat-cloudstrategy.com/why-did-red-hat-acquire-ansible/
+
+Here...the business value of automation:
+http://www.redhat-cloudstrategy.com/the-business-value-of-automation/
+
+CI/CD with Ansible
+https://www.ansible.com/use-cases/continuous-delivery
+
+Ansible Documentation
+http://docs.ansible.com/
+
+Baremetal Bootstrapping
+https://github.com/ansible-provisioning/ansible-provisioning/blob/master/README.md
+
+If I want to do the exam...ansible EX407 Exam Objectives
+https://www.redhat.com/en/services/training/ex407-red-hat-certificate-expertise-ansible-automation
+
+If I need help or want to help others...Google Ansible Group
+https://groups.google.com/d/forum/ansible-project
+
+And #ansible on IRC ( Top 10 users last week )

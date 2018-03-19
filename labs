@@ -1,0 +1,60 @@
+###prerequisites lab 1###
+
+yum list installed python
+sudo yum install -y ansible
+mkdir /home/student/dep-install2
+cd /home/student/dep-install/
+
+###inventory file###
+[dev]
+servera.lab.example.com
+
+###ansible command to list all managed hosts that are part of the dev group###
+ansible dev -i inventory --list-hosts
+
+###prerequisites lab 2###22
+mkdir /home/student/dep-manage
+cd /home/student/dep-manage/
+
+###ansible.cfg###
+[defaults]
+inventory = ./inventory
+
+###inventory file lab 2###
+[myself]
+localhost
+
+[intranetweb]
+servera.lab.example.com
+
+[everyone:children]
+myself
+intranetweb
+
+###ansible command to list all managed hosts that are part of the myself/intranetweb/everyone group###
+ansible myself --list-hosts
+ansible intranetweb --list-hosts
+ansible everyone --list-hosts
+
+###ansible.cfg with priv esc###
+
+[defaults]
+inventory = ./inventory
+
+[privilege_escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = true
+
+###command to show location of current config file being used###
+ansible myself --list-hosts -v
+
+###ping all hosts in the everyone group###
+ansible everyone -m ping
+
+
+
+
+
+

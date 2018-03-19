@@ -1,0 +1,39 @@
+
+    Understand core components of Ansible
+        Inventories
+        Modules
+        Variables
+        Facts
+        Plays
+        Playbooks
+        Configuration files
+
+    Run ad-hoc Ansible commands
+
+    Use both static and dynamic inventories to define groups of hosts
+
+    Utilize an existing dynamic inventory script
+
+    Create Ansible plays and playbooks
+        Know how to work with commonly used Ansible modules
+        Use variables to retrieve the results of running a commands
+        Use conditionals to control play execution
+        Configure error handling
+        Create playbooks to configure systems to a specified state
+        Selectively run specific tasks in playbooks using tags
+
+    Create and use templates to create customized configuration files
+
+    Work with Ansible variables and facts
+
+    Create and work with roles
+
+    Download roles from an Ansible Galaxy and use them
+
+    Manage parallelism
+
+    Use Ansible Vault in playbooks to protect sensitive data
+
+    Install Ansible Tower and use it to manage systems
+
+    Use provided documentation to look up specific information about Ansible modules and commands
